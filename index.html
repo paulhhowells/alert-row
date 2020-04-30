@@ -32,22 +32,27 @@
       grid-gap: 1rem;
       margin: 1rem;
     }
-    .prototype-columns > div {
+    .prototype-column {
       padding: 1rem;
     }
-    .prototype-columns > div:nth-child(1) {
-      background: #4443;
+    .prototype-column:nth-child(1) {
+      background: hsla(200, 30%, 20%, .5);
     }
-    .prototype-columns > div:nth-child(2) {
-      background: #5553;
+    .prototype-column:nth-child(2) {
+      background: hsla(200, 30%, 24%, .5);
     }
-    .prototype-columns > div:nth-child(3) {
-      background: #6663;
+    .prototype-column:nth-child(3) {
+      background: hsla(200, 30%, 32%, .5);
     }
-    .prototype-columns > .narrow {}
-    .prototype-columns > .wide {}
   </style>
   <style>
+		ul.alert,
+		ul.alert--static {
+			margin-left: 0;
+			padding-left: 0;
+			list-style: none;
+		}
+
     .alert-row {
       display: grid;
       grid-template-columns: 3rem auto;
@@ -114,12 +119,12 @@
       border-radius: 0.25rem;
     }
 
-		/* wide */
-    .wide .alert-row__main {
+		/* alert--wide */
+    .alert--wide .alert-row__main {
       flex-wrap: nowrap;
       align-items: flex-start;
     }
-    .wide .alert-row__middle {
+    .alert--wide .alert-row__middle {
       order: 0;
       flex-grow: 1;
       flex-shrink: 1;
@@ -130,88 +135,92 @@
 <body>
 	<h1>Alert Row</h1>
   <div class="prototype-columns">
-    <div class="table">
+    <div class="prototype-column">
 			<h2>Narrow</h2>
-      <div class="alert-row">
-        <div class="alert-row__icon">ICON</div>
-        <div class="alert-row__main">
-          <div class="alert-row__start">FIRST</div>
-          <div class="alert-row__middle">
-            <span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
-          </div>
-          <div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
-        </div>
-      </div>
-      <div class="alert-row">
-        <div class="alert-row__icon">ICON</div>
-        <div class="alert-row__main">
-          <div class="alert-row__start">FIRST</div>
-          <div class="alert-row__middle">
-            <span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
-          </div>
-          <div class="alert-row__end"><span class="alert-row__item">LAST</span><span class="alert-row__item">LAST</span></div>
-        </div>
-      </div>
-      <div class="alert-row">
-        <div class="alert-row__icon">ICON</div>
-        <div class="alert-row__main">
-          <div class="alert-row__start">FIRST</div>
-          <div class="alert-row__middle">
-            <span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
-          </div>
-          <div class="alert-row__end"><span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span></div>
-        </div>
-      </div>
+			<ul class="alert">
+				<li class="alert-row">
+					<div class="alert-row__icon">ICON</div>
+					<div class="alert-row__main">
+						<div class="alert-row__start">FIRST</div>
+						<div class="alert-row__middle">
+							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
+						</div>
+						<div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
+					</div>
+				</li>
+				<li class="alert-row">
+					<div class="alert-row__icon">ICON</div>
+					<div class="alert-row__main">
+						<div class="alert-row__start">FIRST</div>
+						<div class="alert-row__middle">
+							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
+						</div>
+						<div class="alert-row__end"><span class="alert-row__item">LAST</span><span class="alert-row__item">LAST</span></div>
+					</div>
+				</li>
+				<li class="alert-row">
+					<div class="alert-row__icon">ICON</div>
+					<div class="alert-row__main">
+						<div class="alert-row__start">FIRST</div>
+						<div class="alert-row__middle">
+							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
+						</div>
+						<div class="alert-row__end"><span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span></div>
+					</div>
+				</li>
+			</ul>
     </div>
-    <div class="table">
+    <div class="prototype-column">
 			<h2>Wide</h2>
-      <div class="alert-row">
-        <div class="alert-row__icon">ICON</div>
-        <div class="alert-row__main">
-          <div class="alert-row__start">FIRST</div>
-          <div class="alert-row__middle">
-            <span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
-          </div>
-          <div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
-        </div>
-      </div>
-      <div class="alert-row">
-        <div class="alert-row__icon">ICON</div>
-        <div class="alert-row__main">
-          <div class="alert-row__start">FIRST</div>
-          <div class="alert-row__middle">
-            <span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
-          </div>
-          <div class="alert-row__end">
-            <span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span>
-          </div>
-        </div>
-      </div>
-      <div class="alert-row">
-        <div class="alert-row__icon">ICON</div>
-        <div class="alert-row__main">
-          <div class="alert-row__start">FIRST</div>
-          <div class="alert-row__middle">
-            <span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
-          </div>
-          <div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
-        </div>
-      </div>
-      <div class="alert-row">
-        <div class="alert-row__icon">ICON</div>
-        <div class="alert-row__main">
-          <div class="alert-row__start">FIRST</div>
-          <div class="alert-row__middle">
-            <span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
-          </div>
-          <div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
-        </div>
-      </div>
+			<ul class="alert">
+				<li class="alert-row">
+					<div class="alert-row__icon">ICON</div>
+					<div class="alert-row__main">
+						<div class="alert-row__start">FIRST</div>
+						<div class="alert-row__middle">
+							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
+						</div>
+						<div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
+					</div>
+				</li>
+				<li class="alert-row">
+					<div class="alert-row__icon">ICON</div>
+					<div class="alert-row__main">
+						<div class="alert-row__start">FIRST</div>
+						<div class="alert-row__middle">
+							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
+						</div>
+						<div class="alert-row__end">
+							<span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span>
+						</div>
+					</div>
+				</li>
+				<li class="alert-row">
+					<div class="alert-row__icon">ICON</div>
+					<div class="alert-row__main">
+						<div class="alert-row__start">FIRST</div>
+						<div class="alert-row__middle">
+							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
+						</div>
+						<div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
+					</div>
+				</li>
+				<li class="alert-row">
+					<div class="alert-row__icon">ICON</div>
+					<div class="alert-row__main">
+						<div class="alert-row__start">FIRST</div>
+						<div class="alert-row__middle">
+							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
+						</div>
+						<div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
+					</div>
+				</li>
+			</ul>
 		</div>
-		<div>
-			<div class="table">
-				<h2>Element Query</h2>
-				<div class="alert-row">
+		<div class="prototype-column">
+			<h2>Element Query</h2>
+			<ul class="alert">
+				<li class="alert-row">
 					<div class="alert-row__icon">ICON</div>
 					<div class="alert-row__main">
 						<div class="alert-row__start">FIRST</div>
@@ -220,53 +229,8 @@
 						</div>
 						<div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
 					</div>
-				</div>
-				<div class="alert-row">
-					<div class="alert-row__icon">ICON</div>
-					<div class="alert-row__main">
-						<div class="alert-row__start">FIRST</div>
-						<div class="alert-row__middle">
-							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
-						</div>
-						<div class="alert-row__end">
-							<span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span>
-						</div>
-					</div>
-				</div>
-				<div class="alert-row">
-					<div class="alert-row__icon">ICON</div>
-					<div class="alert-row__main">
-						<div class="alert-row__start">FIRST</div>
-						<div class="alert-row__middle">
-							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
-						</div>
-						<div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
-					</div>
-				</div>
-				<div class="alert-row">
-					<div class="alert-row__icon">ICON</div>
-					<div class="alert-row__main">
-						<div class="alert-row__start">FIRST</div>
-						<div class="alert-row__middle">
-							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
-						</div>
-						<div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
-					</div>
-				</div>
-			</div>
-			<div>
-				<h2>Fallback</h2>
-				<div class="alert-row">
-					<div class="alert-row__icon">ICON</div>
-					<div class="alert-row__main">
-						<div class="alert-row__start">FIRST</div>
-						<div class="alert-row__middle">
-							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
-						</div>
-						<div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
-					</div>
-				</div>
-				<div class="alert-row">
+				</li>
+				<li class="alert-row">
 					<div class="alert-row__icon">ICON</div>
 					<div class="alert-row__main">
 						<div class="alert-row__start">FIRST</div>
@@ -277,8 +241,8 @@
 							<span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span>
 						</div>
 					</div>
-				</div>
-				<div class="alert-row">
+				</li>
+				<li class="alert-row">
 					<div class="alert-row__icon">ICON</div>
 					<div class="alert-row__main">
 						<div class="alert-row__start">FIRST</div>
@@ -287,8 +251,8 @@
 						</div>
 						<div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
 					</div>
-				</div>
-				<div class="alert-row">
+				</li>
+				<li class="alert-row">
 					<div class="alert-row__icon">ICON</div>
 					<div class="alert-row__main">
 						<div class="alert-row__start">FIRST</div>
@@ -297,15 +261,60 @@
 						</div>
 						<div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
 					</div>
-				</div>
-			</div>
+				</li>
+			</ul>
+			<h2>Fallback</h2>
+			<ul class="alert--static">
+				<li class="alert-row">
+					<div class="alert-row__icon">ICON</div>
+					<div class="alert-row__main">
+						<div class="alert-row__start">FIRST</div>
+						<div class="alert-row__middle">
+							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
+						</div>
+						<div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
+					</div>
+				</li>
+				<li class="alert-row">
+					<div class="alert-row__icon">ICON</div>
+					<div class="alert-row__main">
+						<div class="alert-row__start">FIRST</div>
+						<div class="alert-row__middle">
+							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
+						</div>
+						<div class="alert-row__end">
+							<span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span>
+						</div>
+					</div>
+				</li>
+				<li class="alert-row">
+					<div class="alert-row__icon">ICON</div>
+					<div class="alert-row__main">
+						<div class="alert-row__start">FIRST</div>
+						<div class="alert-row__middle">
+							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
+						</div>
+						<div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
+					</div>
+				</li>
+				<li class="alert-row">
+					<div class="alert-row__icon">ICON</div>
+					<div class="alert-row__main">
+						<div class="alert-row__start">FIRST</div>
+						<div class="alert-row__middle">
+							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
+						</div>
+						<div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
+					</div>
+				</li>
+			</ul>
 		</div>
   </div>
 
   <script>
     if (ResizeObserver) {
 			const wideBreakpoint = 400;
-			const wideClassName = 'wide';
+			const wideClassName = 'alert--wide';
 
       const resizeObserver = new ResizeObserver(entries => {
         for (let entry of entries) {
@@ -323,8 +332,8 @@
       });
 
 			document
-				.querySelectorAll('.table')
-				.forEach(table => resizeObserver.observe(table));
+				.querySelectorAll('.alert')
+				.forEach(alert => resizeObserver.observe(alert));
     }
   </script>
 </body>
