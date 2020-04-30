@@ -321,11 +321,9 @@
         }
       });
 
-      const tables = document.querySelectorAll('.table');
-
-      tables.forEach(table => {
-        resizeObserver.observe(table);
-      });
+			document
+				.querySelectorAll('.table')
+				.forEach(table => resizeObserver.observe(table));
     }
   </script>
 </body>
