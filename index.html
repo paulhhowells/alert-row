@@ -58,20 +58,24 @@
       color: #111;
       background: #fffc;
     }
+
     .alert-row div {
       box-sizing: border-box;
     }
+
     .alert-row__icon {
       grid-area: icon;
       padding: 0.5625em 0.25em;
       background: #1111;
     }
+
     .alert-row__main {
       grid-area: main;
       display: flex;
       flex-flow: row wrap;
       align-items: center;
     }
+
     .alert-row__start {
       flex-grow: 1;
       flex-shrink: 1;
@@ -79,6 +83,7 @@
       padding: 0.5625em 0.25em;
       background: #FFF5;
     }
+
     .alert-row__middle {
       order: 1;
       flex-grow: 1;
@@ -89,12 +94,6 @@
       flex-wrap: wrap;
       justify-content: flex-start;
       align-items: center;
-    }
-    .alert-row__middle > span {
-      margin: 0.25rem;
-      padding: 0.25rem 0.5rem;
-      border: 1px solid #fff;
-      border-radius: 0.25rem;
     }
 
     .alert-row__end {
@@ -107,13 +106,15 @@
       flex-wrap: wrap;
       justify-content: flex-end;
     }
-    .alert-row__end > span {
+
+		.alert-row__item {
       margin: 0.25rem;
       padding: 0.25rem 0.5rem;
       border: 1px solid #fff;
       border-radius: 0.25rem;
     }
 
+		/* wide */
     .wide .alert-row__main {
       flex-wrap: nowrap;
       align-items: flex-start;
@@ -136,9 +137,9 @@
         <div class="alert-row__main">
           <div class="alert-row__start">FIRST</div>
           <div class="alert-row__middle">
-            <span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span>
+            <span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
           </div>
-          <div class="alert-row__end"><span>LAST</span></div>
+          <div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
         </div>
       </div>
       <div class="alert-row">
@@ -146,9 +147,9 @@
         <div class="alert-row__main">
           <div class="alert-row__start">FIRST</div>
           <div class="alert-row__middle">
-            <span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span>
+            <span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
           </div>
-          <div class="alert-row__end"><span>LAST</span><span>LAST</span></div>
+          <div class="alert-row__end"><span class="alert-row__item">LAST</span><span class="alert-row__item">LAST</span></div>
         </div>
       </div>
       <div class="alert-row">
@@ -156,9 +157,9 @@
         <div class="alert-row__main">
           <div class="alert-row__start">FIRST</div>
           <div class="alert-row__middle">
-            <span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span>
+            <span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
           </div>
-          <div class="alert-row__end"><span>LAST</span> <span>LAST</span> <span>LAST</span> <span>LAST</span> <span>LAST</span></div>
+          <div class="alert-row__end"><span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span></div>
         </div>
       </div>
     </div>
@@ -169,9 +170,9 @@
         <div class="alert-row__main">
           <div class="alert-row__start">FIRST</div>
           <div class="alert-row__middle">
-            <span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span>
+            <span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
           </div>
-          <div class="alert-row__end"><span>LAST</span></div>
+          <div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
         </div>
       </div>
       <div class="alert-row">
@@ -179,10 +180,10 @@
         <div class="alert-row__main">
           <div class="alert-row__start">FIRST</div>
           <div class="alert-row__middle">
-            <span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span>
+            <span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
           </div>
           <div class="alert-row__end">
-            <span>LAST</span> <span>LAST</span> <span>LAST</span>
+            <span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span>
           </div>
         </div>
       </div>
@@ -191,9 +192,9 @@
         <div class="alert-row__main">
           <div class="alert-row__start">FIRST</div>
           <div class="alert-row__middle">
-            <span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span>
+            <span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
           </div>
-          <div class="alert-row__end"><span>LAST</span></div>
+          <div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
         </div>
       </div>
       <div class="alert-row">
@@ -201,9 +202,9 @@
         <div class="alert-row__main">
           <div class="alert-row__start">FIRST</div>
           <div class="alert-row__middle">
-            <span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span>
+            <span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
           </div>
-          <div class="alert-row__end"><span>LAST</span></div>
+          <div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
         </div>
       </div>
 		</div>
@@ -215,9 +216,9 @@
 					<div class="alert-row__main">
 						<div class="alert-row__start">FIRST</div>
 						<div class="alert-row__middle">
-							<span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span>
+							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
 						</div>
-						<div class="alert-row__end"><span>LAST</span></div>
+						<div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
 					</div>
 				</div>
 				<div class="alert-row">
@@ -225,10 +226,10 @@
 					<div class="alert-row__main">
 						<div class="alert-row__start">FIRST</div>
 						<div class="alert-row__middle">
-							<span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span>
+							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
 						</div>
 						<div class="alert-row__end">
-							<span>LAST</span> <span>LAST</span> <span>LAST</span>
+							<span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span>
 						</div>
 					</div>
 				</div>
@@ -237,9 +238,9 @@
 					<div class="alert-row__main">
 						<div class="alert-row__start">FIRST</div>
 						<div class="alert-row__middle">
-							<span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span>
+							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
 						</div>
-						<div class="alert-row__end"><span>LAST</span></div>
+						<div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
 					</div>
 				</div>
 				<div class="alert-row">
@@ -247,9 +248,9 @@
 					<div class="alert-row__main">
 						<div class="alert-row__start">FIRST</div>
 						<div class="alert-row__middle">
-							<span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span>
+							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
 						</div>
-						<div class="alert-row__end"><span>LAST</span></div>
+						<div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
 					</div>
 				</div>
 			</div>
@@ -260,9 +261,9 @@
 					<div class="alert-row__main">
 						<div class="alert-row__start">FIRST</div>
 						<div class="alert-row__middle">
-							<span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span>
+							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
 						</div>
-						<div class="alert-row__end"><span>LAST</span></div>
+						<div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
 					</div>
 				</div>
 				<div class="alert-row">
@@ -270,10 +271,10 @@
 					<div class="alert-row__main">
 						<div class="alert-row__start">FIRST</div>
 						<div class="alert-row__middle">
-							<span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span>
+							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
 						</div>
 						<div class="alert-row__end">
-							<span>LAST</span> <span>LAST</span> <span>LAST</span>
+							<span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span> <span class="alert-row__item">LAST</span>
 						</div>
 					</div>
 				</div>
@@ -282,9 +283,9 @@
 					<div class="alert-row__main">
 						<div class="alert-row__start">FIRST</div>
 						<div class="alert-row__middle">
-							<span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span>
+							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
 						</div>
-						<div class="alert-row__end"><span>LAST</span></div>
+						<div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
 					</div>
 				</div>
 				<div class="alert-row">
@@ -292,9 +293,9 @@
 					<div class="alert-row__main">
 						<div class="alert-row__start">FIRST</div>
 						<div class="alert-row__middle">
-							<span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span><span>MIDDLE</span>
+							<span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span><span class="alert-row__item">MIDDLE</span>
 						</div>
-						<div class="alert-row__end"><span>LAST</span></div>
+						<div class="alert-row__end"><span class="alert-row__item">LAST</span></div>
 					</div>
 				</div>
 			</div>
